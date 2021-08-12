@@ -7,16 +7,16 @@
 	 GENERATED FILE, DO NOT EDIT
 	 Honeycomb-v0.110.1
 	-->
-	<script type="text/javascript" src="//static.parastorage.com/services/third-party/jquery/1.10.2/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="//static.parastorage.com/services/third-party/lodash/2.4.1/dist/lodash.min.js"></script>
-	<script type="text/javascript" src="//static.parastorage.com/services/third-party/paper/0.9.12/paper-full.min.js"></script>
+	<script type="text/javascript" src="https://static.parastorage.com/services/third-party/jquery/1.10.2/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="https://static.parastorage.com/services/third-party/lodash/2.4.1/dist/lodash.min.js"></script>
+	<script type="text/javascript" src="https://static.parastorage.com/services/third-party/paper/0.9.12/paper-full.min.js"></script>
 	<script type="text/javascript" src="./lib/js/utils.js"></script>
 	<script type="text/javascript" src="./lib/js/app.proto.js"></script>
 
-	<script type="text/javascript" src='//static.parastorage.com/services/js-sdk/1.44.0/js/Wix.js'></script>
-	
-	<script type="text/javascript" src="./target/Honeycomb/js/wix.galleries.honeycomb.js"></script>
-	<link rel="stylesheet" type="text/css" href="./target/Honeycomb/css/style.css">
+	<script type="text/javascript" src='https://static.parastorage.com/services/js-sdk/1.44.0/js/wix.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="./target/Honeycomb/css/style.min.css"/>
+	<script type="text/javascript" src="./target/Honeycomb/js/app.min.js"></script>
+
 </head>
 <body>
 <div id="wrapper">
@@ -26,9 +26,9 @@
 	(function(SCOPE){
 		var viewport = $('#viewport');
 		var App = new HoneycombController(viewport, {});
-		SCOPE.App = App;
-        if (window.top == window)
-		    $.get("tests/stubs/stubHoneycomb.json", function(response){App.updateSettings(response)});
+		App.updateSettings();
+		console.log('viewport: ', viewport);
+		console.log('App: ', App);
 	}(window));
 </script>
 </body>
