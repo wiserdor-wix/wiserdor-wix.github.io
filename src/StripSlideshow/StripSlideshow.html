@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!--
+	 GENERATED FILE, DO NOT EDIT
+	 StripSlideshow-v0.105.31
+	-->
+	<script type="text/javascript" src="//static.parastorage.com/services/third-party/jquery/1.10.2/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="//static.parastorage.com/services/third-party/lodash/2.4.1/dist/lodash.min.js"></script>
+	<script type="text/javascript" src="//static.parastorage.com/services/third-party/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+	<script type="text/javascript" src="../../lib/js/jquery.cycle2.min.js"></script>
+	<script type="text/javascript" src="../../lib/js/jquery.cycle2.scrollVert.min.js"></script>
+	<script type="text/javascript" src="../../lib/js/utils.js"></script>
+	<script type="text/javascript" src="../../lib/js/app.proto.js"></script>
+
+	<script type="text/javascript" src='//static.parastorage.com/services/js-sdk/1.44.0/js/Wix.js'></script>
+	
+	<script type="text/javascript" src="./js/wix.galleries.strip.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+<div id="wrapper">
+	<div id="viewport" class="grid"></div>
+</div>
+<script type="text/javascript">
+	(function(SCOPE){
+		var viewport = $('#viewport');
+		var App = new StripGalleryController(viewport, {});
+		SCOPE.App = App;
+        if (window.top == window)
+		    $.get("../../tests/stubs/stubStripGallery.json", function(response){App.updateSettings(response)});
+	}(window));
+</script>
+</body>
+</html>

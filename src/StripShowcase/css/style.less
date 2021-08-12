@@ -1,0 +1,40 @@
+@import "../../lib/less/3L";
+@import "../../lib/less/vendorify";
+
+.reset();
+@import "animations";
+@import "app";
+
+
+#viewport.marketingLandingPage .item.cycle-slide {
+  transition: opacity .25s ease-in-out;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=70);
+
+  /* Netscape */
+  -moz-opacity: 0.7;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.7;
+
+  /* Good browsers */
+  opacity: 0.7;
+
+  &.active-slide-inner, &.init-cycle-slide{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+
+    /* IE 5-7 */
+    filter: alpha(opacity=100);
+
+    /* Netscape */
+    -moz-opacity: 1;
+
+    /* Safari 1.x */
+    -khtml-opacity: 1;
+
+    /* Good browsers */
+    opacity: 1;
+  }
+}

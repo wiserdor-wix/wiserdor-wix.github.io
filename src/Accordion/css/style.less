@@ -1,0 +1,93 @@
+@import "../../lib/less/3L";
+@import "../../lib/less/vendorify";
+@import "../../lib/less/arabic.less";
+@import "../../lib/less/cyrillic.less";
+@import "../../lib/less/hebrew.less";
+@import "../../lib/less/japanese.less";
+@import "../../lib/less/korean.less";
+@import "../../lib/less/latin.less";
+@import "../../lib/less/latin-ext.less";
+
+.reset();
+
+* {.border-box-sizing();}
+
+html, body,#wrapper{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+#viewport{
+	overflow: hidden;
+//	
+	.elems{
+		height: 100%;
+	}
+	.hide{
+		display: none;
+	}
+
+	.details{
+		display: none;
+		padding: 17px 17px 13px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 17px;
+        max-height:40%;
+    }
+	.item{
+		position: absolute;
+		top:0;
+		bottom:0;
+		overflow: hidden;
+		.title{
+			font-size: 18px;
+			letter-spacing: 0px;
+		}
+
+		.desc{
+			font-size: 13px;
+			margin-top: 0;
+			letter-spacing: 0px;
+		}
+	}
+
+	.active{
+		.overlay{
+			background-color: #000000;
+		}
+		.details {
+			display: block;
+		}
+	}
+	.overlay {
+		background-color: #ffffff;
+		position: absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0
+	}
+	.filler{
+		position: relative;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 100%;
+		margin:0 auto;
+	}
+}
+
+#viewport.mobile{
+	.item{
+		position: relative;
+		float: left;
+		.overlay{
+			display:none;
+		}
+	}
+}

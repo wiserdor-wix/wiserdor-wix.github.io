@@ -1,0 +1,31 @@
+{
+    "version": "0.105.40",
+    "app": "Masonry",
+    "main": "Masonry.html",
+    "controller": "MasonryController",
+    "WixSDK": {
+        "version": "1.44.0"
+    },
+    "external": {
+        "js": [
+            "//static.parastorage.com/services/third-party/jquery/1.10.2/dist/jquery.min.js",
+            "//static.parastorage.com/services/third-party/lodash/2.4.1/dist/lodash.min.js",
+            "//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",
+            "../../lib/js/utils.js",
+            "../../lib/js/app.proto.js"
+        ],
+        "css": []
+    },
+    "resources": {
+        "js": [
+            "./js/masonry.pkgd.min.js",
+            "./js/wix.galleries.masonry.js"
+        ],
+        "style": [
+            "./css/style.less"
+        ]
+    },
+    "debug": {
+        "stub": "../../test/stubMasonry.json"
+    }
+}

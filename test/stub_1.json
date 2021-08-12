@@ -1,0 +1,183 @@
+{
+	"items": [
+		{
+			"description": "Some description",
+			"height": 667,
+			"title": "Coffee Beans",
+			"uri": "300a449823eb962ddf8e0b253407a2d4.jpg",
+			"width": 1000,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "imagew7d",
+			"metaData": {
+				"isPreset": false
+			},
+			"originalImageDataRef": null,
+			"alt": ""
+		},
+		{
+			"description": "",
+			"height": 998,
+			"title": "",
+			"uri": "36a890558baa778dce7b6cbc6b746d5a.jpg",
+			"width": 1500,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "image14sx",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "",
+			"height": 800,
+			"title": "Successful Work Team",
+			"uri": "ea2ded871fb834580ae155324f58345d.jpg",
+			"width": 1280,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "image1y3l",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "",
+			"height": 222,
+			"title": "Bicycle Race",
+			"uri": "1bd3ca753c22426c68829695ad4ae7c9.png",
+			"width": 303,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "imagedjk",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "",
+			"height": 2126,
+			"title": "Caprese",
+			"uri": "5f61605c609ad178a06cf919e4f24764.jpg",
+			"width": 1417,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "image1uwd",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "",
+			"height": 800,
+			"title": "Tattooed Couple",
+			"uri": "d402a66125a3c08333fe02017ca33b48.jpg",
+			"width": 800,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "imageass",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "Business People",
+			"height": 998,
+			"title": "",
+			"uri": "bafadadbe810eba6c2d754437f3164ca.jpg",
+			"width": 1500,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "image1roc",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "",
+			"height": 523,
+			"title": "Blue Hummingbird",
+			"uri": "7429e40b460d05ee4f3aeae30e13b52f.jpg",
+			"width": 785,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "image9qh",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "",
+			"height": 314,
+			"title": "iPad",
+			"uri": "a9310f3018ceccaa4aaaed365e78f42d.jpg",
+			"width": 735,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "image1cvm",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "",
+			"height": 667,
+			"title": "Poolside Meditation ",
+			"uri": "c6f5ea79378512d1fded46f6a618178e.jpg",
+			"width": 1000,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "image1ci9",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "",
+			"height": 998,
+			"title": "Business People",
+			"uri": "bafadadbe810eba6c2d754437f3164ca.jpg",
+			"width": 1500,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "image1roc",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		}
+	],
+	"props": {
+		"type": "MasonryProperties",
+		"metaData": {},
+		"expandEnabled": true,
+		"goToLinkText": "Go to link",
+		"galleryImageOnClickAction": "disabled",
+		"numCols": 3,
+		"textMode": "titleAndDescription",
+		"alignText": "left",
+		"boxShadow": "1px 1px 1px 1px rgba(0,0,0,0.14)",
+		"id": "c1k6w",
+		"margin": 25
+	}
+}

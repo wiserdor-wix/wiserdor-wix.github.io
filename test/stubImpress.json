@@ -1,0 +1,369 @@
+{
+    "items": [
+        {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius et neque nec consequat.",
+            "height": 624,
+            "title": "Fresh Raspberry",
+            "uri": "b10430f4334e97e4dada486868bdc32b.jpg",
+            "width": 645,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "imageymk",
+            "metaData": {
+                "isPreset": false
+            },
+            "href": "http://google.co.il",
+            "originalImageDataRef": null,
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 296,
+            "title": "Salmon Rolls",
+            "uri": "daeb33d827a4610b13984b0934106c73.jpg",
+            "width": 296,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "imagezb0",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 1280,
+            "title": "Sausages",
+            "uri": "6bb26b52cb6321d8478d79c998c8bcfa.jpg",
+            "width": 1280,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image128w",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 667,
+            "title": "Sausage and Cheese",
+            "uri": "5e5d794190a7c6ee7801a36484be22a8.jpg",
+            "width": 1000,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image17jd",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 1000,
+            "title": "Salad Preparation",
+            "uri": "590c0a94922ca09d6868a1c5f4bc1cd2.jpg",
+            "width": 662,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image244l",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 667,
+            "title": "Sliced Bread",
+            "uri": "ed7757d68f3f34cb675822307d122cb8.jpg",
+            "width": 1000,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image1foa",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 800,
+            "title": "Shiraz Wine",
+            "uri": "ef236899e5629c41167790cac2c9c37b.png",
+            "width": 602,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image1k2i",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 500,
+            "title": "Sesame Loaf",
+            "uri": "e2a582b76974a4d5a1b93855d211355f.jpg",
+            "width": 578,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "imageaqp",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 667,
+            "title": "Seeded Loaf",
+            "uri": "43f53860653581e854b9d5b71dd5d416.jpg",
+            "width": 1000,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image5vh",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 627,
+            "title": "Shrimp Cocktail",
+            "uri": "502ea97158e8b3c81426e987c63fa844.jpg",
+            "width": 940,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "imagehs2",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 627,
+            "title": "Pan Seared Shrimp",
+            "uri": "556e81a361e36091e8a3edb8fff598c5.jpg",
+            "width": 940,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "imageuxe",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 129,
+            "title": "Shrimp Skewers",
+            "uri": "9fc824b518cbc66e77bf37d3157b78cc.png",
+            "width": 390,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image1r9c",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 194,
+            "title": "Seafood Pasta",
+            "uri": "8672e9b55e386b0bdf041d8819fca9e4.png",
+            "width": 374,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "imageo4i",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 1500,
+            "title": "Smoothies",
+            "uri": "dbbb5b8829db549cbc2c7c8437d83d26.jpg",
+            "width": 1106,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image1ke0",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 853,
+            "title": "Salad",
+            "uri": "834e6621772e779aa0ff41047d5b4918.jpg",
+            "width": 1280,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "imagec8d",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 1000,
+            "title": "Closeup Tomatoes",
+            "uri": "7ebf9b24c339b67eb5c86ec71bc30476.jpg",
+            "width": 1500,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image1cxx",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 965,
+            "title": "Boot Camp",
+            "uri": "c9d10b5ed5f2f2bf4d5890a93013cd71.jpg",
+            "width": 1280,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "imagebe7",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 363,
+            "title": "Watermelon",
+            "uri": "63acdab2791b19995f2d0f2c03fc09d6.png",
+            "width": 640,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "imagerf0",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 800,
+            "title": "Stretching",
+            "uri": "ef00ba0a362f3acbc431a4acabf49efb.jpg",
+            "width": 1280,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image135r",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 2000,
+            "title": "Zuchini",
+            "uri": "67e3429422460bcfe84f1688755f898a.jpg",
+            "width": 3008,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "imagewe7",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 500,
+            "title": "Facial Scrub",
+            "uri": "586b069ea54c7d5e7c7424d955768645.jpg",
+            "width": 500,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image1rjw",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        },
+        {
+            "description": "",
+            "height": 1327,
+            "title": "Girl Eating an Apple",
+            "uri": "a921b1a5953616fa7b1e415200b149c7.jpg",
+            "width": 1280,
+            "mediaType": "picture",
+            "type": "Image",
+            "linkType": "FREE_LINK",
+            "id": "image13hy",
+            "metaData": {
+                "isPreset": false
+            },
+            "alt": ""
+        }
+    ],
+	"props":{
+		"type": "ImpressProperties",
+		"metaData": {
+			"isPreset": false
+		},
+		"alignText": "left",
+        "alphaBcgColor1": 1,
+        "alphaBcgColor2": 1,
+        "alphaBcgColor3": 1,
+        "alphaBcgColor4": 1,
+        "alphaBcgColor5": 1,
+        "autoplay": 0,
+        "autoplayInterval": "1",
+        "bcgColor1": "#FF2A2A",
+        "bcgColor2": "#0099ff",
+        "bcgColor3": "#ffcc00",
+        "bcgColor4": "#64b743",
+        "bcgColor5": "#a31aa3",
+        "font": "arial",
+        "galleryImageOnClickAction": "goToLink",
+        "id": "cko4",
+        "textMode": "titleAndDescription",
+		"layout": "snake",
+		"layoutSeed": 50,
+        "cropAndFitStage": "crop",
+        "imageScale": "4:3",
+		"textColor": "#000000",
+		"alphaTextColor": 1,
+		"descriptionColor": "#ffffff",
+		"alphaDescriptionColor": 1,
+		"textBackgroundColor": "#ffffff",
+		"alphaTextBackgroundColor": 1
+	}
+}

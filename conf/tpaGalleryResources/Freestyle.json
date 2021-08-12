@@ -1,0 +1,49 @@
+{
+    "version": "0.110.1",
+    "app": "Freestyle",
+    "main": "Freestyle.html",
+    "controller": "FreestyleController",
+    "WixSDK": {
+        "version": "1.44.0"
+    },
+    "external": {
+        "js": [
+            "//static.parastorage.com/services/third-party/jquery/1.10.2/dist/jquery.min.js",
+            "//static.parastorage.com/services/third-party/lodash/2.4.1/dist/lodash.min.js",
+            "//static.parastorage.com/services/third-party/hammer/1.0.5/jquery.hammer.min.js",
+            "../../lib/js/seedrandom.min.js",
+            "../../lib/js/utils.js",
+            "../../lib/js/app.proto.js"
+        ],
+        "css": []
+    },
+    "resources": {
+        "js": [
+            "../../lib/js/jquery.event.drag-2.2.js",
+            "./js/wix.galleries.freestyle.js"
+        ],
+        "style": [
+            "./css/style.less"
+        ],
+        "static": [
+            "css/ROTATE-W2.png",
+            "css/MOVE-W2.png",
+            "css/Arrow-FLIP_1-W2.png",
+            "css/Arrow-FLIP_2-W2.png",
+            "css/Arrow-Horizontal-W2.png",
+            "css/Arrow-Vertical-W2.png",
+            "css/1_Down.png",
+            "css/1_Up.png",
+            "css/2_Down-left.png",
+            "css/2_Down-right.png",
+            "css/2_Up-left.png",
+            "css/2_Up-right.png",
+            "css/3_Up.png",
+            "css/sloppynew.png",
+            "css/boundary_square.png"
+        ]
+    },
+    "debug": {
+        "stub": "../../tests/stubs/stubFreestyle.json"
+    }
+}

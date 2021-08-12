@@ -1,0 +1,34 @@
+@import "../../lib/less/3L";
+@import "../../lib/less/vendorify";
+
+.reset();
+@import "animations";
+@import "app";
+
+@media all and (max-width: 678px) and (min-width: 320px) {
+	#viewport .item .overlay .sb-description {
+		.title{
+			font-size: 15px;
+		}
+		.desc {
+			font-size: 10px;
+		}
+	}
+
+	.cycle-pager {
+		bottom: 10px;
+
+		span {
+			font-family: arial;
+			font-size: 80px;
+			min-width: 40px;
+			min-height: 40px;
+			line-height: 60px;
+			vertical-align: baseline;
+			display: inline-block;
+			color: #ddd;
+			cursor: pointer;
+			margin: 0 3px;
+		}
+	}
+}

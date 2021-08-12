@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!--
+	 GENERATED FILE, DO NOT EDIT
+	 <%= app %>-v<%= version %>
+	--><% _.forEach(external.js, function(script) { %>
+	<script type="text/javascript" src="<%= script %>"></script><% }); %>
+<% if (PRODUCTION){ %>
+	<script type="text/javascript" src='//static.parastorage.com/services/js-sdk/<%= WixSDK.version %>/js/wix.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/style.min.css"/>
+	<script type="text/javascript" src="js/app.min.js"></script>
+<% } else if (DEBUG) { %>
+	<script type="text/javascript" src='//static.parastorage.com/services/js-sdk/<%= WixSDK.version %>/js/Wix.js'></script>
+	<% _.forEach(resources.js, function(script) { %>
+	<script type="text/javascript" src="<%= script %>"></script><% });
+	_.forEach(resources.style, function(stylesheet) {
+		if (/\.less$/.test(stylesheet)) stylesheet = stylesheet.replace(/\.less$/,'.css') %>
+	<link rel="stylesheet" type="text/css" href="<%= stylesheet %>"><% });
+	} %>
+</head>
+<body>
+<div id="wrapper">
+	<div id="viewport" class="grid"></div>
+</div>
+<script type="text/javascript">
+	(function(SCOPE){
+		var viewport = $('#viewport');
+		var App = new <%= controller %>(viewport, {});<% if (DEBUG){ %>
+		SCOPE.App = App;
+        if (window.top == window)
+		    $.get("<%= debug.stub %>", function(response){App.updateSettings(response)});<% } %>
+	}(window));
+</script>
+</body>
+</html>

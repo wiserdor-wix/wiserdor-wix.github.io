@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+    <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <ul id="sb-slider" class="sb-slider"></ul>
+    <div id="shadow" class="shadow"></div>
+    <div id="nav-arrows" class="nav-arrows">
+        <a href="#">Next</a>
+        <a href="#">Previous</a>
+    </div>
+</div>
+
+<script type="text/javascript" src='../../lib/js/wix.min.js'></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="//static.parastorage.com/services/third-party/hammer/1.0.5/jquery.hammer.min.js"></script>
+<script type="text/javascript" src="js/jquery.slicebox.js"></script>
+
+<script type="text/javascript">
+
+    var $el = $('#sb-slider');
+    var props = {};
+    var items = [];
+    var currentMode = {};
+    var mainPageId = 'mainPage';
+    var resizeUpdateImagesTimeout;
+    var autoplayTimeout;
+    var pyramid = (function simplePyramid(){
+        var delta = 150;
+        var lastW = $(window).innerWidth();
+        var lastH = $(window).innerHeight();
+
+
+        return {
+            isOverThresholdChange: function (){
+                var w = $(window).innerWidth();
+                var h = $(window).innerHeight();
+                var update = false;
+                if(w > (lastW + delta) || w < (lastW - delta) ){
+                    update = true;
+                }
+                if(h > (lastH + delta) || h < (lastH - delta) ){
+                    update = true;
+                }
+                if(update){
+                    lastW = w;
+                    lastH = h;
+                }
+                return update;
+            }
+        };
+    }());
+
+    Wix.addEventListener(Wix.Events.EDIT_MODE_CHANGE, function(mode) {
+        currentMode = mode;
+        updateAutoPlay();
+    });
+
+    Wix.addEventListener(Wix.Events.PAGE_NAVIGATION_CHANGE, function() {
+     //   autoplayTimeout = setTimeout(updateAutoPlay, getDelayInMS());
+        updateAutoPlay();
+    });
+
+    Wix.addEventListener(Wix.Events.SETTINGS_UPDATED, function(message) {
+        switch(message.cmd) {
+            case 'zoomClosed':
+                hideControls();
+                updateAutoPlay();//autoplayTimeout = setTimeout(updateAutoPlay, getDelayInMS());
+                break;
+            case 'next':
+                next();
+                break;
+            case 'previous':
+                previous();
+                break;
+            default:
+                props = message.props || {};
+                items = message.items || [];
+                refreshSlider();
+                break;
+        }
+        mainPageId = message.mainPageId || mainPageId;
+    });
+
+    Wix.pushState(JSON.stringify({cmd:'componentReady', id: Wix.Utils.getCompId()}));
+
+    function getDelayInMS(){
+        var ms = ((+props.autoplayInterval) * 1000);
+        ms = ms < 5 ? 5 : ms;
+        return ms;
+    }
+
+    function updateAutoPlay(){
+        var vm = Wix.Utils.getViewMode();
+        if(vm === 'preview' || vm === 'site'){
+            autoplayTimeout = setTimeout(startAutoPlay, getDelayInMS());
+        }else{
+            stopAutoPlay()
+        }
+    }
+
+    function startAutoPlay(){
+        clearTimeout(autoplayTimeout);
+        if(props.autoplay){
+            var plugin = getPlugin();
+            plugin && plugin.play();
+        }
+    }
+
+    function stopAutoPlay(){
+        clearTimeout(autoplayTimeout);
+        var plugin = getPlugin();
+        //console.log('go',plugin);
+        plugin && plugin._stopSlideshow();//pause();
+    }
+
+    function next() {
+        var plugin = getPlugin();
+        plugin && plugin.next();
+    }
+
+    function previous() {
+        var plugin = getPlugin();
+        plugin && plugin.previous();
+    }
+
+    function destroySlider(cb){
+        var plugin = getPlugin();
+        plugin && plugin.destroy(cb);
+    }
+
+    function getPlugin(){
+        return $el.data('slicebox');
+    }
+
+    function isMobileView() {
+        return Wix.Utils.getDeviceType() === "mobile";
+    }
+
+    function createSliderDom(){
+        if (isMobileView()) {
+            $('.sb-description').css('display', 'none');
+
+            $('body').css('padding',0);
+            $('#sb-slider').css('padding',0);
+            $('#sb-slider').css('marging',0);
+        }
+        var item;
+        var fragment = document.createDocumentFragment();
+        for(var i=0;i<items.length;i++){
+            item = items[i];
+            fragment.appendChild(createSingleItem(item, i))
+        }
+        return fragment;
+    }
+
+    function getPerfectImageSize(viewPortWidth, viewPortHeight, imageWidth, imageHeight){
+
+        var delta = 60;
+
+        var w = viewPortWidth;
+        var h = viewPortHeight;
+
+        var viewPortRatio = w/h;
+
+        var iw = imageWidth;
+        var ih = imageHeight;
+
+        if(iw < w && ih < h){
+            if(iw/w < ih/h){
+                ih = iw / viewPortRatio;
+            } else {
+                iw = ih * viewPortRatio;
+            }
+        } else if(iw < w){
+            ih = iw / viewPortRatio;
+        } else if(ih < h){
+            iw = ih * viewPortRatio;
+        } else {
+            iw = w;
+            ih = h;
+        }
+
+        if(Wix.Utils.getViewMode() === 'site' || isMobileView()){
+            return {
+                width: iw <<0,//(iw - (iw % delta)) << 0,
+                height:ih <<0// (ih - (ih % delta)) << 0
+            };
+        } else {
+            return {
+                width: (iw - (iw % delta)) << 0,
+                height:(ih - (ih % delta)) << 0
+            };
+        }
+    }
+
+    function createSingleItem(item, index) {
+        var li = document.createElement('li');
+        var img = document.createElement('img');
+        var div = document.createElement('div');
+        var h3 = document.createElement('h3');
+        var p = document.createElement('pre');
+
+        if (props.galleryImageOnClickAction !== 'goToLink') {
+            li.onclick = function (evt){
+                switch (props.galleryImageOnClickAction) {
+                    case 'zoomMode':
+                        Wix.pushState(JSON.stringify({cmd:'zoom', args:[index]}));
+                        stopAutoPlay();
+                        break;
+                    default:
+                        Wix.pushState(JSON.stringify({cmd: 'itemClicked', args: [index]}));
+                }
+                return false;
+            };
+        }
+        if (props.galleryImageOnClickAction === 'zoomMode') {
+            li.style.cursor = 'pointer';
+        }
+        var width = $('.wrapper').width();
+        var height = $('.wrapper').height();
+
+        var imgSize = getPerfectImageSize(width, height, item.width, item.height);
+
+        //img.width = item.width;
+        //img.height = item.height;
+
+        //img.src = Wix.Utils.Media.getResizedImageUrl(item.uri, item.width, item.height);
+        //img.style.clip = 'rect(0,'+$('.wrapper').width()+'px, '+$('.wrapper').height()+'px, 0)'
+
+        if (imgSize.width > 0 && imgSize.height > 0) {
+            img.src = Wix.Utils.Media.getResizedImageUrl(item.uri, imgSize.width, imgSize.height);
+        } else {
+            img.src = Wix.Utils.Media.getResizedImageUrl('0da768_c9952152b7cf41d0b7d84754fd81da12~mv2.png', 4, 4);
+        }
+
+        img.setAttribute('data-uri', item.uri);
+
+
+        $(h3).text(item.title);//'{{TEXT}}';
+        $(p).text(item.description);//.replace(/\n/gm,'</br>');
+
+        div.className = 'sb-description';
+        if (isMobileView()) {
+            div.className += ' hide';
+        } else if(!(item.title || item.description)){
+            div.className += ' hide';
+        }
+
+        if(item.linkType !== "FREE_LINK" && props.galleryImageOnClickAction === 'goToLink'){
+            var uri;
+            var pageId;
+            var a = document.createElement('a');
+            if (item.linkType === 'DOCUMENT') {
+                uri = item.href; //Wix.Utils.Media.getDocumentUrl(item.uri);
+            }
+            if(item.linkType === 'PAGE'){
+                uri = '#';
+                a.onclick = function(){
+                    stopAutoPlay();
+                    pageId = item && item.link && item.link.pageId && item.link.pageId.id || mainPageId;
+                    Wix.navigateToPage(pageId);
+                    return false;
+                }
+            }
+            if(item.linkType === 'ANCHOR'){
+                a.onclick = function(e) {
+                    pageId = item && item.link && item.link.pageId && item.link.pageId.id || mainPageId;
+                    stopAutoPlay();
+                    Wix.pushState(JSON.stringify({cmd: 'navigateToAnchor', args: [pageId, item["data-anchor"]]}));
+                    e.preventDefault();
+                }
+            }
+            if (uri){
+                a.href = uri;
+            }else if (item.href){
+                a.href = item.href;
+            }
+            if (item.title) {
+                a.alt = item.title;
+            }
+            if (item.target) {
+                a.target = item.target === '_self' ? '_parent' : item.target;
+            }
+            a.appendChild(img);
+            img = a;
+        }
+
+        if(item.title){
+            div.appendChild(h3);
+        }
+        if(item.description){
+            div.appendChild(p);
+        }
+
+        li.appendChild(img);
+        li.appendChild(div);
+        return li;
+
+    }
+
+    $('.wrapper').hover(function(e){
+        if($(e.target).is('#shadow')){return}
+
+        if(e.type === 'mouseenter'){
+            if(props.autoplay){
+                $('#nav-arrows').stop().show(200);
+            }
+            $('.sb-current .sb-description').addClass('showOpac');
+        } else {
+            hideControls();
+        }
+    });
+
+    function hideControls(){
+        if(props.autoplay){
+            $('#nav-arrows').stop().hide(200);
+        }
+        $('.sb-current .sb-description').removeClass('showOpac');
+    }
+
+    function reCreatePluginDom(){
+        var sliderDom = createSliderDom();
+        $el.empty().append(sliderDom);
+    }
+
+    function removeLoadingScreen(){
+        $('body').find('#loading').remove();
+    }
+    function appendLoadingScreen(){
+        $('body').find('#loading').remove().end().prepend('<div id="loading"><div id="floatingBarsG"><div class="blockG" id="rotateG_01"></div><div class="blockG" id="rotateG_02"></div><div class="blockG" id="rotateG_03"></div><div class="blockG" id="rotateG_04"></div><div class="blockG" id="rotateG_05"></div><div class="blockG" id="rotateG_06"></div><div class="blockG" id="rotateG_07"></div><div class="blockG" id="rotateG_08"></div></div></div>')
+    }
+
+    function refreshSlider(){
+        destroySlider();
+        appendLoadingScreen();
+        reCreatePluginDom();
+        startSlider();
+    }
+
+    function startSlider(){
+
+        var $navArrows = $('#nav-arrows').hide();
+        var $shadow = $('#shadow').hide();
+        var ms = getDelayInMS();
+
+        var slicebox = $el.slicebox({
+            onReady : function () {
+                if(!props.autoplay){
+                    $navArrows.show();
+                }
+
+                if (!isMobileView()) {
+                    $shadow.show();
+                }
+
+                $navArrows.children(':first').off().on('click', function () {
+                    slicebox.next();
+                    props.autoplay && startAutoPlay();
+                    return false;
+                });
+
+                $navArrows.children(':last').off().on('click', function () {
+                    slicebox.previous();
+                    props.autoplay && startAutoPlay();
+                    return false;
+                });
+
+                Hammer($el).on("swipeleft", function() {
+                    slicebox.previous();
+                    props.autoplay && startAutoPlay();
+                    return false;
+                });
+
+                Hammer($el).on("swiperight", function() {
+                    slicebox.next();
+                    props.autoplay && startAutoPlay();
+                    return false;
+                });
+
+                removeLoadingScreen();
+                updateAutoPlay();
+            },
+            onAfterChange: function(itemIndex) {
+                Wix.pushState(JSON.stringify({cmd:'itemChanged', args:[itemIndex]}));
+            },
+            onresize:function(){
+                clearTimeout(resizeUpdateImagesTimeout);
+                resizeUpdateImagesTimeout = setTimeout(function(){
+                    if(pyramid.isOverThresholdChange()){
+                        refreshSlider();
+                    }
+                }, 2000)
+            },
+            perspective : 1200,
+            orientation : 'r',
+            cuboidsRandom : true,
+            disperseFactor : isMobileView() ? 8 : 25,
+            interval:  ms >= 0 ? (ms+1000) : 5000,
+            autoplay: props.autoplay || false
+        });
+    }
+</script>
+</body>
+</html>

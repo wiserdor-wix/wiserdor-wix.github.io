@@ -1,0 +1,38 @@
+{
+    "version": "0.110.0",
+    "app": "Impress",
+    "main": "Impress.html",
+    "controller": "ImpressController",
+    "WixSDK": {
+        "version": "1.44.0"
+    },
+    "external": {
+        "js": [
+            "//static.parastorage.com/services/third-party/jquery/1.10.2/dist/jquery.min.js",
+            "//static.parastorage.com/services/third-party/lodash/2.4.1/dist/lodash.min.js",
+            "//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",
+            "../../lib/js/seedrandom.min.js",
+            "../../lib/js/utils.js",
+            "../../lib/js/app.proto.js"
+        ],
+        "css": []
+    },
+    "resources": {
+        "js": [
+            "../../lib/js/html5-dataset.js",
+            "../../lib/js/classList.js",
+            "./js/impress.js",
+            "./js/wix.galleries.impress.js"
+        ],
+        "style": [
+            "./css/style.less"
+        ],
+        "static": [
+            "css/arrow-left.png",
+            "css/arrow-right.png"
+        ]
+    },
+    "debug": {
+        "stub": "../../tests/stubs/stubImpress.json"
+    }
+}

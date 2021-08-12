@@ -1,0 +1,11 @@
+.vendorify(@prop, @vals...) {
+	@property: e('@{prop}');
+	@values: `'@{arguments}'.replace(/^\[|\]$/g, '').split(', ').splice(1)`;
+
+	-less-vendorify: ~`                         'auto;\n' +
+    '  -o-'      + '@{property}: ' + '@{values};\n' +
+    '  -ms-'     + '@{property}: ' + '@{values};\n' +
+    '  -moz-'    + '@{property}: ' + '@{values};\n' +
+    '  -webkit-' + '@{property}: ' + '@{values};\n' +
+                 '  @{property}: ' + '@{values}'`;
+}

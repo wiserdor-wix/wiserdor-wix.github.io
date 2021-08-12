@@ -1,0 +1,180 @@
+@import "../../lib/less/3L";
+@import "../../lib/less/vendorify";
+
+.reset();
+
+html, body, #wrapper, #viewport{
+//html, body {
+	height: 100%;
+	width: 100%;
+//	overflow: hidden;
+}
+
+#wrapper{
+  position: relative;
+}
+
+#viewport{
+  overflow: hidden;
+  position: absolute;
+}
+
+.hide{
+  display: none;
+}
+
+pre{
+	font-family: monospace;
+}
+
+pre.debug{
+	font-size:10pt;
+	color: rgba(255,255,255,0.8);
+	background-color: rgba(0,0,0,.4);
+}
+
+.show-more {
+  width: 150px;
+  position: absolute;
+  text-align: center;
+}
+
+.drag {
+//  background-color: #f9f9f9;
+  -ms-filter: ~"""progid:DXImageTransform.Microsoft.Matrix(M11=0, M12=0, M21=0, M22=0)";
+  .border {
+//    filter: blur(1px); -webkit-filter: blur(1px); -moz-filter: blur(1px);
+//    -o-filter: blur(1px); -ms-filter: blur(1px);
+//    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1');
+    position: absolute;
+    z-index: 1;
+  }
+
+  .sloppy {
+    background: url("sloppynew.png") no-repeat;
+//    background-size: cover;
+    background-size: 100% 100%;
+    position: absolute;
+    text-outline: 0;
+    border-top: 0;
+    left: 0;
+    right: 0;
+//    top: 0px;
+//    left: 0px;
+//    right: 0px;
+//    bottom: 0px;
+//    top: -10px;
+//    left: -10px;
+  }
+
+  .filler {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+//    margin: 20px 15px 60px 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .details {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height:40px;
+    padding: 10px 15px 10px 15px;
+    overflow: hidden;
+    background: rgba(150,150,150,.3);
+  }
+  .overlay {
+    margin: -100px;
+    padding: 100px;
+    position: relative;
+//    top: -55px;
+//    left: -65px;
+    pointer-events: none;
+    z-index: 4;
+    &.ductTape1 {
+      background: url("1_Up.png"), url(" 1_Down.png");
+      background-repeat: no-repeat, no-repeat;
+      background-position: center 82px, center bottom 82px;
+    }
+    &.ductTape2 {
+      background: url("2_Up-left.png"), url("2_Up-right.png"), url("2_Down-left.png"), url("2_Down-right.png");
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+      background-position: left 82px top 82px, right 82px top 82px, left 82px bottom 82px, right 82px bottom 82px;
+    }
+    &.ductTape3 {
+      background: url("3_Up.png");
+      background-repeat: no-repeat;
+      background-position: center top 60px;
+    }
+  }
+  .draggable {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    z-index: 5;
+  }
+  .handle {
+    display: none;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background: url(boundary_square.png);
+    z-index: 100;
+  }
+
+  .rotate {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    background: url(ROTATE-W2.png);
+    height: 22px;
+    width: 25px;
+//    background: #9AC;
+  }
+  &.active:hover {
+    cursor: url(MOVE-W2.png) 14 14, auto;
+  }
+  &.active:hover .handle {
+    display: block;
+  }
+
+  &.active .rotate {
+    display: block;
+  }
+
+  &.dropShadow {
+    -webkit-box-shadow: 0px 1px 2px 1px rgba(80,81,80,0.298039);
+    box-shadow: 0px 1px 2px 1px rgba(80,81,80,0.298039);
+  }
+
+  .NE {
+    top: -30px;
+    right: -30px;
+    cursor: hand;
+  }
+
+  .NW {
+    top: -4px;
+    left: -4px;
+  }
+
+  .SE {
+    bottom: -4px;
+    right: -4px;
+  }
+
+  .SW {
+    bottom: -4px;
+    left: -4px;
+  }
+}
+

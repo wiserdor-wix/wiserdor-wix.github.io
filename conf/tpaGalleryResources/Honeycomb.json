@@ -1,0 +1,30 @@
+{
+    "version": "0.110.1",
+    "app": "Honeycomb",
+    "main": "Honeycomb.html",
+    "controller": "HoneycombController",
+    "WixSDK": {
+        "version": "1.44.0"
+    },
+    "external": {
+        "js": [
+            "//static.parastorage.com/services/third-party/jquery/1.10.2/dist/jquery.min.js",
+            "//static.parastorage.com/services/third-party/lodash/2.4.1/dist/lodash.min.js",
+            "//static.parastorage.com/services/third-party/paper/0.9.12/paper-full.min.js",
+            "../../lib/js/utils.js",
+            "../../lib/js/app.proto.js"
+        ],
+        "css": []
+    },
+    "resources": {
+        "js": [
+            "./js/wix.galleries.honeycomb.js"
+        ],
+        "style": [
+            "./css/style.less"
+        ]
+    },
+    "debug": {
+        "stub": "../../tests/stubs/stubHoneycomb.json"
+    }
+}

@@ -1,0 +1,111 @@
+{"items": [
+	{
+		"type": "Image",
+		"title": "Bloom asdlj salkjdl aksjdas jdlaskjd aslk dj",
+		"uri": "0bfb60ff6550b68a849ada091f254158.jpg",
+		"description": "Describe your image here.  Click me and then \"Organize Images\" to change my text.  I'm a great way to display many images along with text to describe them.",
+		"width": 800,
+		"height": 1000,
+		"linkType": "FREE_LINK",
+		"id": "i021a4"
+	},
+	{
+		"type": "Image",
+		"uri": "d5281560853f147420a877b24be7daec.jpg",
+		"width": 800,
+		"height": 536,
+		"linkType": "FREE_LINK",
+		"id": "i1av6"
+	},
+	{
+		"type": "Image",
+		"title": "Ray Of Light",
+		"uri": "84b2ba7d33c6c76e0976354bfeb53223.jpg",
+		"description": "Describe your image here.  Click me and then \"Organize Images\" to change my text.",
+		"width": 800,
+		"height": 800,
+		"linkType": "FREE_LINK",
+		"id": "i28mx"
+	},
+	{
+		"type": "Image",
+		"title": "Tranquil Forest",
+		"uri": "0560932b578ed39cc5ff0d4f9b257496.jpg",
+		"description": "Describe your image here.  Click me and then \"Organize Images\" to change my text.  I'm a great way to display many images along with text to describe them.",
+		"width": 800,
+		"height": 800,
+		"linkType": "FREE_LINK",
+		"id": "i31jvy"
+	},
+	{
+		"type": "Image",
+		"title": "Cherry Blossom ",
+		"uri": "c18ef262eff1988801adc0c6cd9f69c2.jpg",
+		"description": "Describe your image here.  Click me and then \"Organize Images\" to change my text.  I'm a great way to display many images along with text to describe them.    When your visitors click on me I can expand or link to anywhere you choose.",
+		"width": 800,
+		"height": 511,
+		"linkType": "FREE_LINK",
+		"id": "i4jle"
+	},
+	{
+		"type": "Image",
+		"title": "Lily Pond",
+		"uri": "ae505cb9630a240ff39bd7e3a6a30e5b.jpg",
+		"description": "Describe your image here.  Click me and then \"Organize Images\" to change my text.",
+		"width": 700,
+		"height": 525,
+		"linkType": "FREE_LINK",
+		"id": "i5764"
+	},
+	{
+		"type": "Image",
+		"title": "Budding Tree",
+		"uri": "bab38d8e951657c1122c9ef971e512b3.jpg",
+		"description": "Describe your image here.  Click me and then \"Organize Images\" to change my text.  I'm a great way to display many images along with text to describe them.",
+		"width": 800,
+		"height": 800,
+		"linkType": "FREE_LINK",
+		"id": "i61mls"
+	},
+	{
+		"type": "Image",
+		"title": "Water Droplets",
+		"uri": "bbb19657224f3880b7af258ffe1329ec.jpg",
+		"description": "Describe your image here.  Click me and then \"Organize Images\" to change my text.  I'm a great way to display many images along with text to describe them.    When your visitors click on me I can expand or link to anywhere you choose.",
+		"width": 800,
+		"height": 532,
+		"linkType": "FREE_LINK",
+		"id": "i7xe"
+	},
+	{
+		"type": "Image",
+		"title": "Dew",
+		"uri": "e216a94ff6d1a540dc14ee2f4beda3be.jpg",
+		"description": "Describe your image here.  Click me and then \"Organize Images\" to change my text.",
+		"width": 800,
+		"height": 1067,
+		"linkType": "FREE_LINK",
+		"id": "i86ty"
+	}
+], "props": {
+	"type": "MasonryProperties",
+	"metaData": {
+		"isPreset": false
+	},
+	"font": "arial",
+	"galleryImageOnClickAction": "zoomMode",
+	"numCols": 3,
+	"margin": 25,
+	"textMode": "titleAndDescription",
+	"alignText": "left",
+	"boxShadowIsOn": true,
+	"boxShadow": "0px 1px 3px 0px rgba(0,0,0,0.33)",
+	"textBackgroundColor": "#ff0000",
+	"textColor":"#ffffff",
+	"descriptionColor":"#777777",
+	"backgroundMouseoverColor":"#0000ff",
+	"alphaBackgroundMouseoverColor":0.4,
+	"alphaTextBackgroundColor":0.4,
+	"alphaTextColor": 0.8,
+	"id": "cirq"
+}}

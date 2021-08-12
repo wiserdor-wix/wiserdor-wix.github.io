@@ -1,0 +1,65 @@
+@import "../../lib/less/3L";
+@import "../../lib/less/vendorify";
+
+.reset();
+
+html, body, #wrapper{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+﻿body {
+  background-color: transparent;
+}
+
+li {
+  list-style-type: none;
+}
+
+#imagesList {
+
+  display: none;
+}
+.content {
+	width: 60%;
+	position: absolute;
+}
+
+.canvasHolder {
+	width: 100%;
+	left: 0px;
+//  top:-70px;
+  position: absolute;
+}
+
+.canvasHolder canvas {
+  border: 5px solid saddlebrown;
+}
+
+.flip {
+	border: 5px solid red;
+	border-color: black;
+}
+.shadow {
+//	display: none;
+	position: absolute;
+	top: 0px;
+//	left: 425px;
+	width: 80px;
+//	height: 385px;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: url(../shadow80px.png);
+	background-position: 100% 0%;
+	background-repeat: no-repeat repeat;
+}
+
+#mouse {
+  background:green;
+  opacity:0.65;
+  position:absolute;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  z-index: 100;
+}

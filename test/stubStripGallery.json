@@ -1,0 +1,161 @@
+{
+	"items": [
+		{
+			"description": "A program that reads and/or writes CSS style sheets on behalf of a user in either or both of these categories: programs whose purpose is to render documents (e.g., browsers) and programs whose purpose is to create style sheets (e.g., editors). A UA may fall into both categories. (There are other programs that read or write style sheets, but this module gives no rules for them.)",
+			"height": 1000,
+			"title": "Closeup Tomatoes",
+			"uri": "7ebf9b24c339b67eb5c86ec71bc30476.jpg",
+			"width": 1500,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "WEBSITE",
+			"id": "image1mgy",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": "",
+			"originalImageDataRef": null,
+			"href": "http://www.rottentomatoes.com/",
+			"text": "",
+			"target": "_blank",
+			"icon": ""
+		},
+		{
+			"description": "Fry, we have a crate to deliver. I never loved you. We'll need to have a look inside you with this camera. Ah, computer dating. It's like pimping, but you rarely have to use the phrase upside your head. Doomsday device? Ah, now the ball's in Farnsworth's court! Anyone who laughs is a communist!",
+			"height": 965,
+			"title": "Boot Camp",
+			"uri": "c9d10b5ed5f2f2bf4d5890a93013cd71.jpg",
+			"width": 1280,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "imagesd9",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "No! Don't jump! Shut up and take my money! I'll get my kit!",
+			"height": 363,
+			"title": "Watermelon",
+			"uri": "63acdab2791b19995f2d0f2c03fc09d6.png",
+			"width": 640,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "imagetqy",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "When I was first asked to make a film about my nephew, Hubert Farnsworth, I thought \"Why should I?\"",
+			"height": 800,
+			"title": "Stretching",
+			"uri": "ef00ba0a362f3acbc431a4acabf49efb.jpg",
+			"width": 1280,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "image165e",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "Then later, Leela made the film. But if I did make it, you can bet there would have been more topless women on motorcycles. Roll film! ",
+			"height": 2000,
+			"title": "Zuchini",
+			"uri": "67e3429422460bcfe84f1688755f898a.jpg",
+			"width": 3008,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "imageh6b",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "This opera's as lousy as it is brilliant! Your lyrics lack subtlety.",
+			"height": 1327,
+			"title": "Girl Eating an Apple",
+			"uri": "a921b1a5953616fa7b1e415200b149c7.jpg",
+			"width": 1280,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "image1uf3",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "You can't just have your characters announce how they feel. ",
+			"height": 800,
+			"title": "Gym Workout",
+			"uri": "eaceb281396da7551a63e9f2264ab732.jpg",
+			"width": 1200,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "imageoxw",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "That makes me feel angry! Switzerland is small and neutral! ",
+			"height": 852,
+			"title": "Guy Working Out",
+			"uri": "35fb6c4c46d4823f5a7b7d25b78477a1.jpg",
+			"width": 773,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "image20tw",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		},
+		{
+			"description": "We are more like Germany, ambitious and misunderstood!",
+			"height": 1280,
+			"title": "Manicure",
+			"uri": "545a7b02408b0002598e808a7664a9bd.jpg",
+			"width": 1280,
+			"mediaType": "picture",
+			"type": "Image",
+			"linkType": "FREE_LINK",
+			"id": "imagelg0",
+			"metaData": {
+				"isPreset": false
+			},
+			"alt": ""
+		}
+	],
+	"props": {
+		"type": "StripProperties",
+		"font": "helveticaNeue",
+		"textMode": "titleAndDescription",
+		"alignText": "left",
+		"id": "c1eaf",
+		"titleColor": "#0099ff",
+		"alphaTitleColor": 0.8,
+		"dsecriptionColor": "#4a4a4a",
+		"alphaDsecriptionColor": 0.8,
+		"backgroundColor": "#ffffff",
+		"alphaBackgroundColor": 0.75,
+        "autoplay": false,
+        "autoplayInterval": 0,
+        "transDuration": 1,
+        "transition": "scroll"
+	}
+}
