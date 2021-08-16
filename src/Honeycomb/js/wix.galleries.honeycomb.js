@@ -9,24 +9,24 @@ var HoneycombController = function (element, config) {
 }
 utils.inherits(HoneycombController, SimpleAppProto);
 
-HoneycombController.prototype.updatePixelRatio = function(){
-	// Calculate canvas size for hi ppi rate devices to prevent pixelated pictures
-	var self = this,
+HoneycombController.prototype.updatePixelRatio = function () {
+  // Calculate canvas size for hi ppi rate devices to prevent pixelated pictures
+  var self = this,
     viewportSize = self.getViewportSize();
-	
-	const canvasContext = self.canvas.getContext('2d');
-	if (canvasContext) {
-		const devicePixelRatio = Math.ceil(window.devicePixelRatio);
 
-		self.canvas.width *= devicePixelRatio;
-		self.canvas.height *= devicePixelRatio;
+  const canvasContext = self.canvas.getContext('2d');
+  if (canvasContext) {
+    const devicePixelRatio = Math.ceil(window.devicePixelRatio);
 
-		self.canvas.style.width = viewportSize.width + 'px';
-		self.canvas.style.height = viewportSize.height + 'px';
+    self.canvas.width = viewportSize.width * devicePixelRatio;
+    self.canvas.height = viewportSize.height * devicePixelRatio;
 
-		canvasContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-	}
-}
+    self.canvas.style.width = viewportSize.width + 'px';
+    self.canvas.style.height = viewportSize.height + 'px';
+
+    canvasContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+  }
+};
 
 HoneycombController.prototype.createDom = function(config){
   //	console.log('createDom')
