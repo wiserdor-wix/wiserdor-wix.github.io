@@ -38,8 +38,6 @@ HoneycombController.prototype.createDom = function(config){
   self.canvas.width = viewportSize.width;
   self.canvas.height = viewportSize.height;
 
-  self.updatePixelRatio()
-
   self.canvas.setAttribute('hidpi', 'off');
   self.quality = (config || {}).quality || {};
 
@@ -391,7 +389,6 @@ HoneycombController.prototype.updateCanvasSize = function(){
 	self.canvas.height = size.height
 	self.canvas.width = size.width
 	if (paper.view) paper.view.viewSize = [size.width, size.height]
-	self.updatePixelRatio();
 	Wix.setHeight(size.height);
 	return size
 }
@@ -711,7 +708,7 @@ HoneycombController.prototype.updateLayout = function(){
 	if (self.inUpdate) return
 
 	self.inUpdate = true;
-	self.canvas.width = viewportSize.width;
+	self.updatePixelRatio();
 
 
 	if (!self.cells) {
@@ -802,7 +799,6 @@ HoneycombController.prototype.updateSettings = function(config){
 		self.outlineLayer().fillColor = self.props.holesColor
 		self.outlineLayer().fillColor.alpha = self.props.alphaHolesColor
 		self.scaleGrid()
-		self.updatePixelRatio()
 	}
 }
 
