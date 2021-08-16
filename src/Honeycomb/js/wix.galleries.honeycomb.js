@@ -9,20 +9,20 @@ var HoneycombController = function (element, config) {
 }
 utils.inherits(HoneycombController, SimpleAppProto);
 
-HoneycombController.prototype.updatePixelRatio = function () {
+HoneycombController.prototype.updatePixelRatio = function (canvas) {
   // Calculate canvas size for hi ppi rate devices to prevent pixelated pictures
   var self = this,
     viewportSize = self.getViewportSize();
 
-  const canvasContext = self.canvas.getContext('2d');
+  const canvasContext = canvas.getContext('2d');
   if (canvasContext) {
     const devicePixelRatio = Math.ceil(window.devicePixelRatio);
 
-    self.canvas.width = viewportSize.width * devicePixelRatio;
-    self.canvas.height = viewportSize.height * devicePixelRatio;
+    canvas.width = viewportSize.width * devicePixelRatio;
+    canvas.height = viewportSize.height * devicePixelRatio;
 
-    self.canvas.style.width = viewportSize.width + 'px';
-    self.canvas.style.height = viewportSize.height + 'px';
+    canvas.style.width = viewportSize.width + 'px';
+    canvas.style.height = viewportSize.height + 'px';
 
     canvasContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
   }
@@ -37,6 +37,8 @@ HoneycombController.prototype.createDom = function(config){
 
   self.canvas.width = viewportSize.width;
   self.canvas.height = viewportSize.height;
+
+  self.updatePixelRatio(self.canvas)
 
   self.canvas.setAttribute('hidpi', 'off');
   self.quality = (config || {}).quality || {};
@@ -62,8 +64,6 @@ HoneycombController.prototype.createDom = function(config){
   self.el.append(self.canvas);
   paper.setup(self.canvas);
   paper.project.activeLayer.remove();
-  self.updatePixelRatio()
-
 }
 
 HoneycombController.prototype.calcViewportOffset = function(){
@@ -391,7 +391,7 @@ HoneycombController.prototype.updateCanvasSize = function(){
 	self.canvas.height = size.height
 	self.canvas.width = size.width
 	if (paper.view) paper.view.viewSize = [size.width, size.height]
-	self.updatePixelRatio();
+	self.updatePixelRatio(self.canvas);
 	Wix.setHeight(size.height);
 	return size
 }
