@@ -28,7 +28,7 @@
 		var App = new HoneycombController(viewport, {});
 		SCOPE.App = App;
         if (window.top == window)
-		    $.get("../../tests/stubs/stubHoneycomb.json", function(response){App.updateSettings(response)});
+		    $.get("../../test/stubHoneycomb.json", function(response){App.updateSettings(response)});
 	}(window));
 </script>
 </body>
