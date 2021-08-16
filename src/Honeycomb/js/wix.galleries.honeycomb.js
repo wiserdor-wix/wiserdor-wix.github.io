@@ -59,11 +59,11 @@ HoneycombController.prototype.createDom = function(config){
     );
   });
 
-  self.updatePixelRatio()
-
   self.el.append(self.canvas);
   paper.setup(self.canvas);
   paper.project.activeLayer.remove();
+  self.updatePixelRatio()
+
 }
 
 HoneycombController.prototype.calcViewportOffset = function(){
