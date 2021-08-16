@@ -22,7 +22,7 @@ HoneycombController.prototype.updatePixelRatio = function(){
 		self.canvas.height *= devicePixelRatio;
 
 		self.canvas.style.width = viewportSize.width + 'px';
-		self.canvas.style.height = self.canvas.height + 'px';
+		self.canvas.style.height = viewportSize.height + 'px';
 
 		canvasContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
 	}
