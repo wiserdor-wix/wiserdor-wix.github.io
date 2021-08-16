@@ -20,18 +20,18 @@ HoneycombController.prototype.createDom = function(config){
   self.canvas.height = viewportSize.height;
 
   // Calculate canvas size for hi ppi rate devices to prevent pixelated pictures
-//   const canvasContext = self.canvas.getContext('2d');
-//   if (canvasContext) {
-//     const devicePixelRatio = Math.ceil(window.devicePixelRatio);
+  const canvasContext = self.canvas.getContext('2d');
+  if (canvasContext) {
+    const devicePixelRatio = Math.ceil(window.devicePixelRatio);
 
-//     self.canvas.width *= devicePixelRatio;
-//     self.canvas.height *= devicePixelRatio;
+    self.canvas.width *= devicePixelRatio;
+    self.canvas.height *= devicePixelRatio;
 
-//     self.canvas.style.width = viewportSize.width + 'px';
-//     self.canvas.style.height = viewportSize.height + 'px';
+    self.canvas.style.width = viewportSize.width + 'px';
+    self.canvas.style.height = viewportSize.height + 'px';
 
-//     canvasContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-//   }
+    canvasContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+  }
 
   self.canvas.setAttribute('hidpi', 'off');
   self.quality = (config || {}).quality || {};
