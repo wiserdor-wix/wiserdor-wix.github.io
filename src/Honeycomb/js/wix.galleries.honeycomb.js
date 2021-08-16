@@ -391,7 +391,6 @@ HoneycombController.prototype.updateCanvasSize = function(){
 	self.canvas.height = size.height
 	self.canvas.width = size.width
 	if (paper.view) paper.view.viewSize = [size.width, size.height]
-	self.updatePixelRatio();
 	Wix.setHeight(size.height);
 	return size
 }
