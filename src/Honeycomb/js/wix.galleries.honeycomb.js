@@ -38,8 +38,6 @@ HoneycombController.prototype.createDom = function(config){
   self.canvas.width = viewportSize.width;
   self.canvas.height = viewportSize.height;
 
-  self.updatePixelRatio()
-
   self.canvas.setAttribute('hidpi', 'off');
   self.quality = (config || {}).quality || {};
 
@@ -60,6 +58,8 @@ HoneycombController.prototype.createDom = function(config){
       }
     );
   });
+
+  self.updatePixelRatio()
 
   self.el.append(self.canvas);
   paper.setup(self.canvas);
