@@ -9,20 +9,20 @@ var HoneycombController = function (element, config) {
 }
 utils.inherits(HoneycombController, SimpleAppProto);
 
-HoneycombController.prototype.updatePixelRatio = function (canvas) {
+HoneycombController.prototype.updatePixelRatio = function () {
   // Calculate canvas size for hi ppi rate devices to prevent pixelated pictures
   var self = this,
     viewportSize = self.getViewportSize();
 
-  const canvasContext = canvas.getContext('2d');
+  const canvasContext = self.canvas.getContext('2d');
   if (canvasContext) {
     const devicePixelRatio = Math.ceil(window.devicePixelRatio);
 
-    canvas.width = viewportSize.width * devicePixelRatio;
-    canvas.height = viewportSize.height * devicePixelRatio;
+    self.canvas.width = viewportSize.width * devicePixelRatio;
+    self.canvas.height = viewportSize.height * devicePixelRatio;
 
-    canvas.style.width = viewportSize.width + 'px';
-    canvas.style.height = viewportSize.height + 'px';
+    self.canvas.style.width = viewportSize.width + 'px';
+    self.canvas.style.height = viewportSize.height + 'px';
 
     canvasContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
   }
@@ -38,7 +38,7 @@ HoneycombController.prototype.createDom = function(config){
   self.canvas.width = viewportSize.width;
   self.canvas.height = viewportSize.height;
 
-  self.updatePixelRatio(self.canvas)
+  self.updatePixelRatio()
 
   self.canvas.setAttribute('hidpi', 'off');
   self.quality = (config || {}).quality || {};
@@ -391,7 +391,7 @@ HoneycombController.prototype.updateCanvasSize = function(){
 	self.canvas.height = size.height
 	self.canvas.width = size.width
 	if (paper.view) paper.view.viewSize = [size.width, size.height]
-	self.updatePixelRatio(self.canvas);
+	self.updatePixelRatio();
 	Wix.setHeight(size.height);
 	return size
 }
@@ -802,6 +802,7 @@ HoneycombController.prototype.updateSettings = function(config){
 		self.outlineLayer().fillColor = self.props.holesColor
 		self.outlineLayer().fillColor.alpha = self.props.alphaHolesColor
 		self.scaleGrid()
+		self.updatePixelRatio()
 	}
 }
 
