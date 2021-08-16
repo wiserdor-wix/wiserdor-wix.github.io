@@ -9,6 +9,25 @@ var HoneycombController = function (element, config) {
 }
 utils.inherits(HoneycombController, SimpleAppProto);
 
+HoneycombController.prototype.updatePixelRatio = function(){
+	// Calculate canvas size for hi ppi rate devices to prevent pixelated pictures
+	var self = this,
+    viewportSize = self.getViewportSize();
+	
+	const canvasContext = self.canvas.getContext('2d');
+	if (canvasContext) {
+		const devicePixelRatio = Math.ceil(window.devicePixelRatio);
+
+		self.canvas.width *= devicePixelRatio;
+		self.canvas.height *= devicePixelRatio;
+
+		self.canvas.style.width = viewportSize.width + 'px';
+		self.canvas.style.height = viewportSize.height + 'px';
+
+		canvasContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+	}
+}
+
 HoneycombController.prototype.createDom = function(config){
   //	console.log('createDom')
   var self = this,
@@ -19,19 +38,7 @@ HoneycombController.prototype.createDom = function(config){
   self.canvas.width = viewportSize.width;
   self.canvas.height = viewportSize.height;
 
-  // Calculate canvas size for hi ppi rate devices to prevent pixelated pictures
-//   const canvasContext = self.canvas.getContext('2d');
-//   if (canvasContext) {
-//     const devicePixelRatio = Math.ceil(window.devicePixelRatio);
-
-//     self.canvas.width *= devicePixelRatio;
-//     self.canvas.height *= devicePixelRatio;
-
-//     self.canvas.style.width = viewportSize.width + 'px';
-//     self.canvas.style.height = viewportSize.height + 'px';
-
-//     canvasContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-//   }
+  self.updatePixelRatio()
 
   self.canvas.setAttribute('hidpi', 'off');
   self.quality = (config || {}).quality || {};
@@ -384,7 +391,7 @@ HoneycombController.prototype.updateCanvasSize = function(){
 	self.canvas.height = size.height
 	self.canvas.width = size.width
 	if (paper.view) paper.view.viewSize = [size.width, size.height]
-
+	updatePixelRatio();
 	Wix.setHeight(size.height);
 	return size
 }
