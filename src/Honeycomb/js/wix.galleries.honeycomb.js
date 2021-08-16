@@ -9,25 +9,6 @@ var HoneycombController = function (element, config) {
 }
 utils.inherits(HoneycombController, SimpleAppProto);
 
-HoneycombController.prototype.updatePixelRatio = function () {
-  // Calculate canvas size for hi ppi rate devices to prevent pixelated pictures
-  var self = this,
-    viewportSize = self.getViewportSize();
-
-  const canvasContext = self.canvas.getContext('2d');
-  if (canvasContext) {
-    const devicePixelRatio = Math.ceil(window.devicePixelRatio);
-
-    self.canvas.width = viewportSize.width * devicePixelRatio;
-    self.canvas.height = viewportSize.height * devicePixelRatio;
-
-    self.canvas.style.width = viewportSize.width + 'px';
-    self.canvas.style.height = viewportSize.height + 'px';
-
-    canvasContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-  }
-};
-
 HoneycombController.prototype.createDom = function(config){
   //	console.log('createDom')
   var self = this,
@@ -63,6 +44,25 @@ HoneycombController.prototype.createDom = function(config){
   paper.setup(self.canvas);
   paper.project.activeLayer.remove();
 }
+
+HoneycombController.prototype.updatePixelRatio = function () {
+    // Calculate canvas size for hi ppi rate devices to prevent pixelated pictures
+    var self = this,
+      viewportSize = self.getViewportSize();
+  
+    const canvasContext = self.canvas.getContext('2d');
+    if (canvasContext) {
+      const devicePixelRatio = Math.ceil(window.devicePixelRatio);
+  
+      self.canvas.width = viewportSize.width * devicePixelRatio;
+      self.canvas.height = viewportSize.height * devicePixelRatio;
+  
+      self.canvas.style.width = viewportSize.width + 'px';
+      self.canvas.style.height = viewportSize.height + 'px';
+  
+      canvasContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+    }
+  };
 
 HoneycombController.prototype.calcViewportOffset = function(){
 	return this.shapeSideMargin()
@@ -389,7 +389,8 @@ HoneycombController.prototype.updateCanvasSize = function(){
 	self.canvas.height = size.height
 	self.canvas.width = size.width
 	if (paper.view) paper.view.viewSize = [size.width, size.height]
-	self.updatePixelRatio();
+
+    self.updatePixelRatio();
 	Wix.setHeight(size.height);
 	return size
 }
@@ -709,8 +710,7 @@ HoneycombController.prototype.updateLayout = function(){
 	if (self.inUpdate) return
 
 	self.inUpdate = true;
-	self.updatePixelRatio();
-
+    self.updatePixelRatio();
 
 	if (!self.cells) {
 		self.calcGrid();
