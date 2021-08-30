@@ -710,7 +710,6 @@ HoneycombController.prototype.updateLayout = function(){
 	if (self.inUpdate) return
 
 	self.inUpdate = true;
-    self.updatePixelRatio();
 
 	if (!self.cells) {
 		self.calcGrid();
@@ -726,6 +725,8 @@ HoneycombController.prototype.updateLayout = function(){
 	self.fillShapes(self.cells, function(){
 		self.inUpdate = false;
 	});
+
+	self.updatePixelRatio();
 }
 
 HoneycombController.prototype.destroy = function(dropDomElement){
