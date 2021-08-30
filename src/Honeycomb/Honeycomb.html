@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title></title>
@@ -7,29 +8,36 @@
 	 GENERATED FILE, DO NOT EDIT
 	 Honeycomb-v0.110.1
 	-->
-	<script type="text/javascript" src="//static.parastorage.com/services/third-party/jquery/1.10.2/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="//static.parastorage.com/services/third-party/lodash/2.4.1/dist/lodash.min.js"></script>
-	<script type="text/javascript" src="//static.parastorage.com/services/third-party/paper/0.9.12/paper-full.min.js"></script>
+	<script type="text/javascript"
+		src="//static.parastorage.com/services/third-party/jquery/1.10.2/dist/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="//static.parastorage.com/services/third-party/lodash/2.4.1/dist/lodash.min.js"></script>
+	<script type="text/javascript"
+		src="//static.parastorage.com/services/third-party/paper/0.9.12/paper-full.min.js"></script>
 	<script type="text/javascript" src="../../lib/js/utils.js"></script>
 	<script type="text/javascript" src="../../lib/js/app.proto.js"></script>
 
 	<script type="text/javascript" src='//static.parastorage.com/services/js-sdk/1.44.0/js/Wix.js'></script>
-	
+
 	<script type="text/javascript" src="./js/wix.galleries.honeycomb.js"></script>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
+
 <body>
-<div id="wrapper">
-	<div id="viewport" class="grid"></div>
-</div>
-<script type="text/javascript">
-	(function(SCOPE){
-		var viewport = $('#viewport');
-		var App = new HoneycombController(viewport, {});
-		SCOPE.App = App;
-        if (window.top == window)
-		    $.get("../../test/stubHoneycomb.json", function(response){App.updateSettings(response)});
-	}(window));
-</script>
+	<div style="height: 344px; width: 100%;">
+		<div id="wrapper">
+			<div id="viewport" class="grid"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		(function (SCOPE) {
+			var viewport = $('#viewport');
+			var App = new HoneycombController(viewport, {});
+			SCOPE.App = App;
+			if (window.top == window)
+				$.get("../../test/stubHoneycomb.json", function (response) { App.updateSettings(response) });
+		}(window));
+	</script>
 </body>
+
 </html>
