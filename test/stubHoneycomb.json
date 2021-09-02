@@ -179,131 +179,6 @@
 			"isPreset": false
 		},
 		"alt": ""
-	},
-	{
-		"description": "",
-		"height": 194,
-		"title": "Seafood Pasta",
-		"uri": "8672e9b55e386b0bdf041d8819fca9e4.png",
-		"width": 374,
-		"mediaType": "picture",
-		"type": "Image",
-		"linkType": "FREE_LINK",
-		"id": "imageo4i",
-		"metaData": {
-			"isPreset": false
-		},
-		"alt": ""
-	},
-	{
-		"description": "",
-		"height": 1500,
-		"title": "Smoothies",
-		"uri": "dbbb5b8829db549cbc2c7c8437d83d26.jpg",
-		"width": 1106,
-		"mediaType": "picture",
-		"type": "Image",
-		"linkType": "FREE_LINK",
-		"id": "image1ke0",
-		"metaData": {
-			"isPreset": false
-		},
-		"alt": ""
-	},
-	{
-		"description": "",
-		"height": 853,
-		"title": "Salad",
-		"uri": "834e6621772e779aa0ff41047d5b4918.jpg",
-		"width": 1280,
-		"mediaType": "picture",
-		"type": "Image",
-		"linkType": "FREE_LINK",
-		"id": "imagec8d",
-		"metaData": {
-			"isPreset": false
-		},
-		"alt": ""
-	},
-	{
-		"type": "Image",
-		"title": "Water Droplets",
-		"uri": "cd6a81b7d29d88425609ecc053a00d16.jpg",
-		"description": "Describe your image here",
-		"width": 1000,
-		"height": 750,
-		"linkType": "FREE_LINK",
-		"id": "i03kt"
-	},
-	{
-		"type": "Image",
-		"title": "Budding Tree",
-		"uri": "44dab8ba8e2b5ec71d897466745a1623.jpg",
-		"description": "Describe your image here",
-		"width": 1000,
-		"height": 750,
-		"linkType": "FREE_LINK",
-		"id": "i1v8g"
-	},
-	{
-		"type": "Image",
-		"title": "Fallen Apples",
-		"uri": "8dfce587e3f99f17bba2d3346fea7a8d.jpg",
-		"description": "Describe your image here",
-		"width": 758,
-		"height": 569,
-		"linkType": "FREE_LINK",
-		"id": "i2v0y"
-	},
-	{
-		"type": "Image",
-		"title": "Cherry Blossom",
-		"uri": "3dcc6f56be1f8507181d0197e52d09e8.jpg",
-		"description": "Describe your image here",
-		"width": 1000,
-		"height": 750,
-		"linkType": "FREE_LINK",
-		"id": "i3bld"
-	},
-	{
-		"type": "Image",
-		"title": "Ray of Light",
-		"uri": "8fed9ef13904fb85b6b12092c269a465.jpg",
-		"description": "Describe your image here",
-		"width": 750,
-		"height": 563,
-		"linkType": "FREE_LINK",
-		"id": "i41drq"
-	},
-	{
-		"type": "Image",
-		"title": "Bloom",
-		"uri": "24bba47f40f8473a534ae0301bf748c9.jpg",
-		"description": "Describe your image here",
-		"width": 1000,
-		"height": 750,
-		"linkType": "FREE_LINK",
-		"id": "i517n2"
-	},
-	{
-		"type": "Image",
-		"title": "Dew",
-		"uri": "8dde68848c4daae3a6905dc6a17d270e.jpg",
-		"description": "Describe your image here",
-		"width": 800,
-		"height": 600,
-		"linkType": "FREE_LINK",
-		"id": "i619fr"
-	},
-	{
-		"type": "Image",
-		"title": "Tranquil forest",
-		"uri": "568544c06dafc9d2ab6f4f4496e7d7b9.jpg",
-		"description": "Describe your image here",
-		"width": 800,
-		"height": 600,
-		"linkType": "FREE_LINK",
-		"id": "i7258"
 	}
 ],
 	"props": {
@@ -316,8 +191,8 @@
 		"textMode": "titleAndDescription",
 		"galleryImageOnClickAction": "zoomMode",
 		"imageShape": "Triangle",
-		"margin": 10,
-		"numOfColumns": 6,
+		"margin": 20,
+		"numOfColumns": 3,
 		"layoutSeed": 50,
 		"rolloverAnimation": "colorOnly",
 		"id": "clb1",
