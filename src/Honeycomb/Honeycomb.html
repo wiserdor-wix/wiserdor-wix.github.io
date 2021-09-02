@@ -24,7 +24,7 @@
 </head>
 
 <body>
-	<div style="height: 344px; width: 100%;">
+	<div>
 		<div id="wrapper">
 			<div id="viewport" class="grid"></div>
 		</div>
@@ -34,8 +34,7 @@
 			var viewport = $('#viewport');
 			var App = new HoneycombController(viewport, {});
 			SCOPE.App = App;
-			if (window.top == window)
-				$.get("../../test/stubHoneycomb.json", function (response) { App.updateSettings(response) });
+			$.get("../../test/stubHoneycomb.json", function (response) { App.updateSettings(response) });
 		}(window));
 	</script>
 </body>
