@@ -708,6 +708,7 @@ HoneycombController.prototype.updateLayout = function(){
 		, viewportSize = self.getViewportSize()
 
 	if (self.inUpdate) return
+	self.updatePixelRatio();
 
 	self.inUpdate = true;
 
@@ -726,7 +727,6 @@ HoneycombController.prototype.updateLayout = function(){
 		self.inUpdate = false;
 	});
 
-	self.updatePixelRatio();
 }
 
 HoneycombController.prototype.destroy = function(dropDomElement){
